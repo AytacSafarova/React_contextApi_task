@@ -30,7 +30,7 @@ function App() {
           </li>
           <li>
             <Link className="link" to="/detail">
-              detail{" "}
+              Detail{" "}
             </Link>
           </li>
         </ul>

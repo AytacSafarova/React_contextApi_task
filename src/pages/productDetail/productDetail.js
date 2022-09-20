@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import "./productDetail.css";
 
 export default function ProductDetail() {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ export default function ProductDetail() {
       </button>
 
       <h1>Supplier Details</h1>
-      <table id="suppliers_list">
+      <table id="product_list">
         <thead>
           <tr>
             <th>Id</th>

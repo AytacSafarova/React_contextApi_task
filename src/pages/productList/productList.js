@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { ProductContext } from "../productContext/productContext";
+import "./productList.css";
 
 export default function ProductList() {
   const { products, setProducts } = useContext(ProductContext);
@@ -21,7 +22,7 @@ export default function ProductList() {
       name: item.name,
       quantity: item.quantityPerUnit,
     };
-   
+
     basketproducts.push(obj);
     console.log(basketproducts);
   }
@@ -29,12 +30,11 @@ export default function ProductList() {
   return (
     <>
       <h1>List</h1>
-      <table id="suppliers_list">
+      <table id="product_list">
         <thead>
           <tr>
             <th>Id</th>
             <th>Name</th>
-
             <th>Supplier Id</th>
             <th>Quantity per unit </th>
             <th>Unit Price </th>
@@ -53,9 +53,12 @@ export default function ProductList() {
                   <td>{item.quantityPerUnit}</td>
                   <td>{item.unitPrice}</td>
                   <td>
-                    <button onClick={() => addBAsket(item)}>Add to Card</button>
+                    <button className="button" onClick={() => addBAsket(item)}>
+                      Add to Card
+                    </button>
                     <Link
-                      style={{ color: "black", textDecoration: "none" }}
+                      style={{ textDecoration: "none" }}
+                      className="button"
                       to={`/detail/${item.id}`}
                     >
                       Details

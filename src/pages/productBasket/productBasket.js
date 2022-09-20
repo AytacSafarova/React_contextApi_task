@@ -1,5 +1,6 @@
 import { useContext} from "react";
 import { ProductContext } from "../productContext/productContext";
+import "./productBasket.css"
 
  function ProductBasket() {
   const { basketproducts, setBasketproducts } = useContext(ProductContext);
@@ -13,7 +14,7 @@ import { ProductContext } from "../productContext/productContext";
   return (
     <>
       <h1>Basket</h1>
-      <table id="suppliers_list">
+      <table id="product_list ">
         <thead>
           <tr>
             <th>Id</th>
